@@ -1,0 +1,243 @@
+:root{
+    /*Text*/
+    --Verydarkgrayishblue: hsl(237, 12%, 33%);
+    --Darkgrayishblue: hsl(240, 6%, 50%);
+    /*Gradinent*/
+    --Soft-violet: hsl(273, 75%, 66%);
+    --SoftBlue: hsl(240, 73%, 65%);
+    /*Dividers*/
+    --LightGrayishBlue: hsl(240, 5%, 91%);
+}
+html{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+body{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--Soft-violet),var(--SoftBlue));
+    font-size: 12px;
+    font-family: "Kumbh Sans", sans-serif;
+    color: var(--Darkgrayishblue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.container{
+    border-radius: 25px;
+    margin-top: 150px;
+    margin-bottom: 40px;
+    width: 80%;
+    background-color: white;
+    padding: 0 20px 20px;
+    height: 75%;
+}
+.img-encabezado{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+}
+.img-encabezado > img{
+    width: 230px;
+}
+.cubo{
+    position: absolute;
+    width: 10px;
+    opacity: 0;
+}
+.shadow{
+    transform: translateY(-70px);
+}
+.summary {
+    margin-top: 60px;
+}
+.question{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+}
+h1{
+    height: 35px;
+    text-align: center;
+    color: var(--Verydarkgrayishblue);
+}
+.questions{
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    color: var(--Verydarkgrayishblue);
+    font-weight: 700;
+    z-index: 0;
+    position: relative;
+    line-height: 20px;
+}
+nav  div{
+    line-height: 30px;
+}
+button{
+    background-color: transparent;
+    color: white;
+    border: 0;
+    cursor: pointer;
+    font-size: 19px;
+    z-index: 1000;
+    position: absolute; /* Agregamos posición absoluta al botón */
+    transform: translateY(-50%); 
+    right: 0; 
+}
+#navbar1 ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .5s ease;
+    width: 310px;
+    position: absolute;
+}
+#navbar1.open ul{
+    margin: 10px 0;
+    max-height: 60px;
+    position: relative;
+}
+#navbar2 ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .3s ease;
+    width: 310px;
+    position: absolute;
+}
+#navbar2.open ul{
+    margin: 10px 0;
+    max-height: 60px;
+    position: relative;
+}
+#navbar3 ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .3s ease;
+    width: 310px;
+    position: absolute;
+}
+#navbar3.open ul{
+    margin: 10px 0;
+    max-height: 60px;
+    position: relative;
+}
+#navbar4 ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .3s ease;
+    width: 310px;
+    position: absolute;
+}
+#navbar4.open ul{
+    margin: 10px 0;
+    max-height: 60px;
+    position: relative;
+}
+#navbar5 ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .3s ease;
+    width: 310px;
+    position: absolute;
+}
+#navbar5.open ul{
+    margin: 10px 0;
+    max-height: 60px;
+    position: relative;
+}
+nav.open button{
+    transform: rotate(180deg);
+    transition: transform .3s ease;
+}
+
+@media screen and (min-width: 660px){
+    .container{
+        position: relative;
+        display: flex;
+        overflow: hidden;
+        padding: 0;
+        margin: 0;
+        width: 80%;
+        height: 70%;
+    }
+    .img-encabezado{
+        position: relative;
+        display: grid;
+        align-content: center;
+        justify-content: flex-start;
+        height: 516px;
+        width: 400px;
+        margin: 0;
+        padding: 0;
+    }
+    .img-encabezado > .woman-img{
+        position: absolute;
+        transform: translateX(-75px);
+        width: 400px;
+        z-index: 0;
+        overflow: hidden;
+    }
+    .img-encabezado > .shadow{
+        transform: translate(-90px, 50%);
+        width: 400px;
+        z-index: 1;
+    }
+    .img-encabezado > .cubo{
+        opacity: 1;
+        position:fixed;
+        width: 190px;
+        transform: translate(-50%, 28%);
+    }
+    .summary{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 516px;
+        position: relative;
+
+    }
+    .question{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+    .question > h1{
+        text-align: start;
+        margin-top: 50px;
+    }
+    #question-space{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-62%, -50%);
+        width: 80%;
+
+    }
+    hr{
+        margin-bottom: 20px;
+        width: auto;
+    }
+
+}
+
